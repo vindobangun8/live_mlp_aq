@@ -1,0 +1,14 @@
+joblib
+numpy
+pandas
+pyyaml
+scikit-learn
+tqdm
+matplotlib
+scipy
+seaborn
+imblearn
+pydantic
+fastapi
+uvicorn
+streamlit
