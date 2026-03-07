@@ -7,11 +7,11 @@ from PIL import Image
 import utils
 
 # Constant variables.
-PATH_CONFIG = "../config/config.yaml"
-PATH_IMAGE = "../assets/header_images.jpg"
+# PATH_CONFIG = "../config/config.yaml"
+PATH_IMAGE = "./assets/header_images.jpg"
 
 
-config = utils.load_config(PATH_CONFIG)
+config = utils.load_config()
 
 
 # Load images in the header.
@@ -103,7 +103,7 @@ with st.form(key = "air_data_form"):
 
         # Create a loading animation while predicting.
         with st.spinner("Sending data to prediction server ..."):
-            res = requests.post("http://localhost:8080/predict", json=raw_data).json()
+            res = requests.post("http://api:8080/predict", json=raw_data).json()
 
         # Parse the prediction.
         if res["error_msg"] != "":

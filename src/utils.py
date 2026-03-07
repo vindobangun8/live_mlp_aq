@@ -4,10 +4,13 @@ import joblib
 
 from datetime import datetime
 
+# Constant variables.
+# PATH_CONFIG = "../config/config.yaml"
+PATH_CONFIG = "./config/config.yaml"
 
 # Common functions.
 # Function to load configuration parameter.
-def load_config(path_config):
+def load_config():
     """
     Load the configuration file (config.yaml).
 
@@ -24,10 +27,10 @@ def load_config(path_config):
 
     # Try to load config.yaml file.
     try:
-        with open(path_config, 'r') as file:
+        with open(PATH_CONFIG, 'r') as file:
             params = yaml.safe_load(file)
     except FileNotFoundError as err:
-        raise RuntimeError(f"Configuration file not found in {path_config}")
+        raise RuntimeError(f"Configuration file not found in {PATH_CONFIG}")
 
     return params
 
@@ -111,4 +114,5 @@ def deserialize_data(path):
 
 # Function to show the current datetime.
 def time_stamp():
+    """Return the current datetime."""
     return datetime.now()
