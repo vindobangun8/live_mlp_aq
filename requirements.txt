@@ -12,3 +12,5 @@ pydantic
 fastapi
 uvicorn
 streamlit
+pytest
+mkdocs
