@@ -4,3 +4,4 @@ notebooks/.ipynb_checkpoints/
 data/
 __pycache__/
 docs/site/
+.pytest_cache/
